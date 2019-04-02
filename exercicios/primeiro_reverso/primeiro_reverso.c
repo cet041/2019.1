@@ -1,3 +1,11 @@
+/*
+ * Escreva a função primeiro_reverso(str) que imprima a string 'str' na ordem
+ * inversa. Para exemplos, compare o arquivo input.in com dados de entrada
+ * e como eles devem ficar, em output.ou.
+ *
+ * Por exemplo, tendo a palavra UESC como entrada, a saída deverá ser CSEU.
+ */
+
 #include <stdio.h> 
 #include <string.h>
 
@@ -5,27 +13,15 @@
 
 void primeiro_reverso(char str[]) { 
   
-  // code goes here
-  int size = strlen(str);
-  str[size - 1] = '\0';
-
-  for(int i = 0; i < size/2; i++) {
-    int j = (size - 1) - i;
-    char tmp = str[i];
-    str[i] = str[j];
-    str[j] = tmp;
-  }
-  
-  printf("%s\n", str);
+  //escreva a solução aqui 
 }
 
 int main(void) { 
   
-  // keep this function call here
+  //mantenha o código abaixo como está
   char str[BUFFLEN];
   while(fgets(str, BUFFLEN, stdin)) {
-      printf("%s", str);
-    //primeiro_reverso(str);
+    primeiro_reverso(str);
   }
   return 0;
 } 
